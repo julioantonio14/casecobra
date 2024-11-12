@@ -26,9 +26,9 @@ const Steps = () => {
     return <ol className="rounded-md bg-white lg:flex lg:rounded-none lg:border-l lg:border-r lg:border-gray-200">
         {STEPS.map((step, i) => {
             const isCurrent = pathname.endsWith(step.url);
-            const isCompleted = STEPS.slice(i + 1).some((step) => {
+            const isCompleted = STEPS.slice(i + 1).some((step) =>
                 pathname.endsWith(step.url)
-            });
+            )
             const imgPath = `/snake-${i + 1}.png`;
             return (<li key={step.name} className="relative overflow-hidden lg:flex-1">
                 <div>
